@@ -34,3 +34,8 @@ helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
 # Gitにpushする
 # まず確認
 git status
+# 
+git add . 
+git commit -m "......"
+git push origin master
+
