@@ -31,6 +31,7 @@ class Fib extends Component {
     const set_index = await axios.get('/api/values/set/'+this.state.index);
 
     console.log("this.state.index is",this.state.index);
+    console.log("set_index,res:",set_index);
 
     // await axios.post('/api/values', {
     //   index: this.state.index
