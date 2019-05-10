@@ -25,8 +25,7 @@ class Fib extends Component {
     });
   }
 
-  handleSubmit = async event => {
-    event.preventDefault();
+  async handleSubmit(){
 
     const set_index = await axios.get('/api/values/set/'+this.state.index);
     console.log("this.state.index is",this.state.index);
@@ -37,7 +36,21 @@ class Fib extends Component {
     // });
 
     this.setState({ index: '' });
-  };
+  }
+
+  // handleSubmit = async event => {
+  //   event.preventDefault();
+  //
+  //   const set_index = await axios.get('/api/values/set/'+this.state.index);
+  //   console.log("this.state.index is",this.state.index);
+  //   console.log("set_index,res:",set_index);
+  //
+  //   // await axios.post('/api/values', {
+  //   //   index: this.state.index
+  //   // });
+  //
+  //   this.setState({ index: '' });
+  // };
 
   renderSeenIndexes() {
     let res=null;
